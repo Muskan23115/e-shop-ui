@@ -47,16 +47,12 @@
     <div class="product-grid">
       <!-- Placeholder Product -->
       <div class="product-card" data-type="Accessories" data-subtype="Bags">
-        <img src="assets/images/sample.jpg" alt="Elegant Bag">
+        <img src="https://via.placeholder.com/400x300.png?text=Elegant+Bag" alt="Elegant Bag">
         <h4>Elegant Bag</h4>
         <p>Type: Accessories</p>
       </div>
 
-      <div class="product-card" data-type="Electronics" data-subtype="Phones">
-        <img src="assets/images/sample2.jpg" alt="Smartphone">
-        <h4>Smartphone X</h4>
-        <p>Type: Electronics</p>
-      </div>
+
 
 
       <!-- Repeat as needed -->
@@ -66,7 +62,21 @@
   <footer>
     <p>&copy; 2025 Luxora. All rights reserved.</p>
   </footer>
+
+  <!-- Product Detail Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modalImage" src="" alt="Product" />
+    <h2 id="modalTitle">Product Name</h2>
+    <p id="modalType">Type: </p>
+    <p id="modalDesc">Description goes here...</p>
+  </div>
+</div>
+
 <script src="js/filter.js"></script>
+<script src="js/main.js"></script>
+
 
 </body>
 </html>
