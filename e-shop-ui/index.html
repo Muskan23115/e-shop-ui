@@ -15,7 +15,8 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Products</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
+
       </ul>
     </nav>
   </header>
@@ -38,6 +39,7 @@
     <option value="Bags">Bags</option>
     <option value="Watches">Watches</option>
     <option value="Phones">Phones</option>
+    <option value="Cosmetics">Cosmetics</option>
   </select>
 
   <input type="text" id="nameSearch" placeholder="Search by name..." />
@@ -47,7 +49,7 @@
     <div class="product-grid">
       <!-- Placeholder Product -->
       <div class="product-card" data-type="Accessories" data-subtype="Bags">
-        <img src="https://via.placeholder.com/400x300.png?text=Elegant+Bag" alt="Elegant Bag">
+        <img src="assets/images/sample.png" alt="Elegant Bag"> alt="Elegant Bag">
         <h4>Elegant Bag</h4>
         <p>Type: Accessories</p>
       </div>
@@ -61,6 +63,22 @@
 
   <footer>
     <p>&copy; 2025 Luxora. All rights reserved.</p>
+    <section class="contact-form" id="contact">
+  <h2>Send Us a Query</h2>
+  <form id="queryForm">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
   </footer>
 
   <!-- Product Detail Modal -->
@@ -74,9 +92,41 @@
   </div>
 </div>
 
+
 <script src="js/filter.js"></script>
 <script src="js/main.js"></script>
 
 
+</body>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("queryForm");
+
+    if (form) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        try {
+          const response = await fetch("http://localhost:5000/send-query", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ name, email, message })
+          });
+
+          const result = await response.json();
+          alert(result.message);
+        } catch (error) {
+          alert("Something went wrong while sending your query.");
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>

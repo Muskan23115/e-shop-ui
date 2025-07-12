@@ -1,39 +1,84 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("productModal");
-  const modalImage = document.getElementById("modalImage");
-  const modalTitle = document.getElementById("modalTitle");
-  const modalType = document.getElementById("modalType");
-  const modalDesc = document.getElementById("modalDesc");
-  const closeBtn = document.querySelector(".close-btn");
+  const productGrid = document.querySelector(".product-grid");
+  const typeFilter = document.getElementById("typeFilter");
+  const subtypeFilter = document.getElementById("subtypeFilter");
+  const nameSearch = document.getElementById("nameSearch");
 
-  const productCards = document.querySelectorAll(".product-card");
+  let allProducts = [];
 
-  productCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const img = card.querySelector("img").src;
-      const title = card.querySelector("h4").textContent;
-      const type = card.getAttribute("data-type");
-      const subtype = card.getAttribute("data-subtype");
+  async function loadProducts() {
+    try {
+      const response = await fetch("data/products.json");
+      allProducts = await response.json();
+      displayProducts(allProducts);
+    } catch (err) {
+      console.error("Failed to load products:", err);
+    }
+  }
 
-      modalImage.src = img;
-      modalTitle.textContent = title;
-      modalType.textContent = `Type: ${type} (${subtype})`;
-      modalDesc.textContent = "This is a sleek and luxurious product designed to elevate your style.";
+  function displayProducts(products) {
+    productGrid.innerHTML = ""; // Clear grid
 
-      modal.style.display = "flex";
+    if (products.length === 0) {
+      productGrid.innerHTML = `<p>No products found.</p>`;
+      return;
+    }
+
+    products.forEach(product => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.dataset.type = product.type;
+      card.dataset.subtype = product.subtype;
+
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h4>${product.name}</h4>
+        <p>Type: ${product.type}</p>
+      `;
+
+      card.addEventListener("click", () => showModal(product));
+      productGrid.appendChild(card);
     });
+  }
+
+  function filterProducts() {
+    const selectedType = typeFilter.value;
+    const selectedSubtype = subtypeFilter.value;
+    const searchText = nameSearch.value.trim().toLowerCase();
+
+    const filtered = allProducts.filter(product => {
+      const matchesType = selectedType === "" || product.type === selectedType;
+      const matchesSubtype = selectedSubtype === "" || product.subtype === selectedSubtype;
+      const matchesName = product.name.toLowerCase().includes(searchText);
+      return matchesType && matchesSubtype && matchesName;
+    });
+
+    displayProducts(filtered);
+  }
+
+  function showModal(product) {
+    const modal = document.getElementById("productModal");
+    document.getElementById("modalImage").src = product.image;
+    document.getElementById("modalTitle").textContent = product.name;
+    document.getElementById("modalType").textContent = `Type: ${product.type} (${product.subtype})`;
+    document.getElementById("modalDesc").textContent = "This is a premium product of Luxora.";
+    modal.style.display = "flex";
+  }
+
+  document.querySelector(".close-btn").addEventListener("click", () => {
+    document.getElementById("productModal").style.display = "none";
   });
 
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    console.log("Clicked product:", title, img);
-
-  });
-
-  // Close on outside click
   window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
+    if (e.target === document.getElementById("productModal")) {
+      document.getElementById("productModal").style.display = "none";
     }
   });
+
+  // 🔁 Listen for filter changes
+  typeFilter.addEventListener("change", filterProducts);
+  subtypeFilter.addEventListener("change", filterProducts);
+  nameSearch.addEventListener("input", filterProducts);
+
+  loadProducts();
 });
