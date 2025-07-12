@@ -234,3 +234,12 @@ footer {
 .contact-form button:hover {
   background-color: #7E6957;
 }
+
+@keyframes floatBeans {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 1000px;
+  }
+}
