@@ -1,0 +1,124 @@
+[
+  {
+    "name": "Cat Tote",
+    "type": "Accessories",
+    "subtype": "Bags",
+    "image": "assets/images/elegant-bag.png"
+  },
+  {
+    "name": "Smart Watch",
+    "type": "Accessories",
+    "subtype": "Watches",
+    "image": "assets/images/smart-watch.webp"
+  },
+  {
+    "name": "Samsung Galaxy S24 Ultra",
+    "type": "Electronics",
+    "subtype": "Phones",
+    "image": "assets/images/phone-x.png"
+  },
+  {
+    "name": "Lip Gloss",
+    "type": "Accessories",
+    "subtype": "Cosmetics",
+    "image": "assets/images/lip4.png"
+
+  },
+  {
+    "name": "Heels",
+    "type": "Accessories",
+    "subtype": "Footwear",
+    "image": "assets/images/foot2.png"
+
+  },
+  {
+    "name": "Kerala Tote",
+    "type": "Accessories",
+    "subtype": "Bags",
+    "image": "assets/images/kerala.png"
+  },
+  {
+    "name": "Starry Nights Tote",
+    "type": "Accessories",
+    "subtype": "Bags",
+    "image": "assets/images/starry-nights.png"
+  },
+  {
+    "name": "Watch 1",
+    "type": "Accessories",
+    "subtype": "Watches",
+    "image": "assets/images/watch1.png"
+  },
+  {
+    "name": "Watch 2",
+    "type": "Accessories",
+    "subtype": "Watches",
+    "image": "assets/images/watch2.png"
+  },
+  {
+    "name": "Watch 3",
+    "type": "Accessories",
+    "subtype": "Watches",
+    "image": "assets/images/watch3.png"
+  },
+  {
+    "name": "Watch 4",
+    "type": "Accessories",
+    "subtype": "Watches",
+    "image": "assets/images/watch4.png"
+  },
+  {
+    "name": "Sneakers",
+    "type": "Accessories",
+    "subtype": "Footwear",
+    "image": "assets/images/foot1.png"
+  },
+  {
+    "name": "Flower Tote",
+    "type": "Accessories",
+    "subtype": "Bags",
+    "image": "assets/images/flower.png"
+  },
+  {
+    "name": "Footwear",
+    "type": "Accessories",
+    "subtype": "Footwear",
+    "image": "assets/images/foot3.png"
+  },
+  {
+    "name": "Boots",
+    "type": "Accessories",
+    "subtype": "Footwear",
+    "image": "assets/images/foot4.png"
+  },
+  {
+    "name": "Footwear 5",
+    "type": "Accessories",
+    "subtype": "Footwear",
+    "image": "assets/images/foot5.png"
+  },
+  {
+    "name": "Lipstick",
+    "type": "Accessories",
+    "subtype": "Cosmetics",
+    "image": "assets/images/lip1.png"
+  },
+  {
+    "name": "Toner",
+    "type": "Accessories",
+    "subtype": "Cosmetics",
+    "image": "assets/images/lip2.png"
+  },
+  {
+    "name": "Blushes",
+    "type": "Accessories",
+    "subtype": "Cosmetics",
+    "image": "assets/images/lip3.png"
+  },
+  {
+    "name": "Cycle Tote",
+    "type": "Accessories",
+    "subtype": "Bags",
+    "image": "assets/images/cycle-bag.png"
+  }
+]
