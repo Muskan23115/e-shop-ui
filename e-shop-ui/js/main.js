@@ -61,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modalImage").src = product.image;
     document.getElementById("modalTitle").textContent = product.name;
     document.getElementById("modalType").textContent = `Type: ${product.type} (${product.subtype})`;
-    document.getElementById("modalDesc").textContent = "This is a premium product of Luxora.";
+    
+    // 👇 Updated line
+    document.getElementById("modalDesc").textContent = product.description || "No description available.";
+
     modal.style.display = "flex";
   }
 

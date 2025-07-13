@@ -3,122 +3,140 @@
     "name": "Cat Tote",
     "type": "Accessories",
     "subtype": "Bags",
-    "image": "assets/images/elegant-bag.png"
+    "image": "assets/images/elegant-bag.png",
+    "description": "Graphic cat print with a fun attitude. Price: $3"
   },
   {
-    "name": "Smart Watch",
+    "name": "Watch",
     "type": "Accessories",
     "subtype": "Watches",
-    "image": "assets/images/smart-watch.webp"
+    "image": "assets/images/smart-watch.webp",
+    "description": "Classic analog design with a sleek leather strap."
   },
   {
     "name": "Samsung Galaxy S24 Ultra",
     "type": "Electronics",
     "subtype": "Phones",
-    "image": "assets/images/phone-x.png"
+    "image": "assets/images/phone-x.png",
+    "description": "6.8\" AMOLED, 200MP camera, 5000mAh battery."
   },
   {
     "name": "Lip Gloss",
     "type": "Cosmetics",
     "subtype": "Lipstick",
-    "image": "assets/images/lip4.png"
-
+    "image": "assets/images/lip4.png",
+    "description": "Soft matte finish with long-lasting hydration."
   },
   {
     "name": "Heels",
     "type": "Accessories",
     "subtype": "Footwear",
-    "image": "assets/images/foot2.png"
-
+    "image": "assets/images/foot2.png",
+    "description": "Dagger heel design with velvet finish. Price: €925"
   },
   {
     "name": "Kerala Tote",
     "type": "Accessories",
     "subtype": "Bags",
-    "image": "assets/images/kerala.png"
+    "image": "assets/images/kerala.png",
+    "description": "Scenic Kerala theme with elephants & autos. Price: $3"
   },
   {
     "name": "Starry Nights Tote",
     "type": "Accessories",
     "subtype": "Bags",
-    "image": "assets/images/starry-nights.png"
+    "image": "assets/images/starry-nights.png",
+    "description": "Inspired by Van Gogh’s Starry Night art. Price: $3"
   },
   {
     "name": "Watch 1",
     "type": "Accessories",
     "subtype": "Watches",
-    "image": "assets/images/watch1.png"
+    "image": "assets/images/watch1.png",
+    "description": "Luxury analog with silver bezel & date display."
   },
   {
     "name": "Watch 2",
     "type": "Accessories",
     "subtype": "Watches",
-    "image": "assets/images/watch2.png"
+    "image": "assets/images/watch2.png",
+    "description": "Elegant rose-gold case with minimalist dial."
   },
   {
     "name": "Watch 3",
     "type": "Accessories",
     "subtype": "Watches",
-    "image": "assets/images/watch3.png"
+    "image": "assets/images/watch3.png",
+    "description": "Chunky sports design with water resistance."
   },
   {
     "name": "Watch 4",
     "type": "Accessories",
     "subtype": "Watches",
-    "image": "assets/images/watch4.png"
+    "image": "assets/images/watch4.png",
+    "description": "Smartwatch with fitness tracking and alerts."
   },
   {
     "name": "Sneakers",
     "type": "Accessories",
     "subtype": "Footwear",
-    "image": "assets/images/foot1.png"
+    "image": "assets/images/foot1.png",
+    "description": "Retro-futuristic sole, breathable mesh design."
   },
   {
     "name": "Flower Tote",
     "type": "Accessories",
     "subtype": "Bags",
-    "image": "assets/images/flower.png"
+    "image": "assets/images/flower.png",
+    "description": "Pastel floral artwork on canvas. Price: $3"
   },
   {
     "name": "Footwear",
     "type": "Accessories",
     "subtype": "Footwear",
-    "image": "assets/images/foot3.png"
+    "image": "assets/images/foot3.png",
+    "description": "Bold everyday sneakers with durable sole."
   },
   {
     "name": "Boots",
     "type": "Accessories",
     "subtype": "Footwear",
-    "image": "assets/images/foot4.png"
+    "image": "assets/images/foot4.png",
+    "description": "Black leather ankle boots, pointed toe. Price: $90+"
   },
   {
-    "name": "Footwear 5",
+    "name": "Shoes",
     "type": "Accessories",
     "subtype": "Footwear",
-    "image": "assets/images/foot5.png"
+    "image": "assets/images/foot5.png",
+    "description": "Casual lace-up shoes with rubber grip."
   },
   {
     "name": "Lipstick",
     "type": "Cosmetics",
     "subtype": "Lipstick",
-    "image": "assets/images/lip1.png"
+    "image": "assets/images/lip1.png",
+    "description": "MAC Powder Kiss finish in Kinda Soar-Ta."
   },
   {
     "name": "Toner",
     "type": "Cosmetics",
-    "subtype": "Skin Care",
-    "image": "assets/images/lip2.png"
+    "subtype": "Makeup",
+    "image": "assets/images/lip2.png",
+    "description": "Gentle toner to refresh and prep your skin."
   },
   {
     "name": "Blushes",
     "type": "Cosmetics",
     "subtype": "Makeup",
-    "image": "assets/images/lip3.png"
+    "image": "assets/images/lip3.png",
+    "description": "Velvety soft blush with natural pink tones."
   },
   {
     "name": "Cycle Tote",
     "type": "Accessories",
     "subtype": "Bags",
-    "image": "assets/images/cycle-bag.png"
+    "image": "assets/images/cycle-bag.png",
+    "description": "Watercolor bicycle art print. Price: $3"
   }
 ]
